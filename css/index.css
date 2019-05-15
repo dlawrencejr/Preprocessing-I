@@ -153,3 +153,9 @@ h1 {
   font-size: 1.7rem;
   margin: 10px 0px;
 }
+p {
+  font-size: 1.2rem;
+}
+button {
+  paddingborder-radius: 1px solid black;
+}
