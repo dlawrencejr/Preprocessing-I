@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 html,
 body,
@@ -133,13 +133,19 @@ table {
 html,
 body {
   height: 100%;
-  line-height: 1.7;
   width: 100%;
+}
+.container {
+    height: auto;
+      line-height: 1.7;
+      width: 100%;
+      padding: 0px 5px;
+      border: 10px solid black;
+      background: cornsilk;
 }
 header {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
 }
 header nav {
   display: flex;
@@ -147,20 +153,40 @@ header nav {
   margin-bottom: 4rem;
 }
 header nav a {
+  text-decoration: none;
+  color: maroon;
   margin: 0px 10px;
 }
 h1 {
   font-size: 1.7rem;
   margin: 10px 0px;
 }
+h2 {
+  font-size: 1.5rem;
+  margin: 10px 0px;
+}
 p {
   font-size: 1.2rem;
 }
 strong {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: red;
 }
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 5px 40px 5px 5px;
+}
+th {
+  text-align: left;
+}
 button {
+  cursor: pointer;
   padding: 10px;
   width: 200px;
   font-size: 15px;
@@ -168,4 +194,31 @@ button {
   border-color: turquoise;
   background-color: darkmagenta;
   margin: 20px 0px;
+}
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 10px;
+}
+.cmo {
+  width: 60%;
+  margin-right: 15%;
+}
+.history {
+  margin: 50px 0;
+}
+.icons,
+a {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: orangered;
+}
+.contact p {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background: lavenderblush;
 }
