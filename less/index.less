@@ -1,7 +1,7 @@
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -17,43 +17,245 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+display: block;
 }
 body {
-	line-height: 1;
+line-height: 1;
 }
 ol, ul {
-	list-style: none;
+list-style: none;
 }
 blockquote, q {
-	quotes: none;
+quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+content: '';
+content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+border-collapse: collapse;
+border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+
 }
 
+
+@coloring: red;
+@more-color:dodgerblue;
+@tangerine: 'Tangerine', serif;
+
+.border(){
+padding-top: 5px;
+border-top: 1px dashed blue;	
+}
+.column{
+display: flex;
+flex-direction: column;
+}
+
+h1,h2,h3,h4,h5{
+font-size:3rem;
+}
+
+.container{
+height: 100%;
+line-height: 1.7;
+width:100%;
+padding:10px;
+border: 25px solid black;
+background: cornsilk;
+@media(max-width: 500px) {
+
+background: gray;
+
+}
+}
+
+header{
+.column();
+h1{
+font-family: @tangerine;
+font-size: 4rem;
+margin: 10px 0px;
+@media(max-width: 500px){
+text-align: center;
+font-size: 3rem;
+}
+}
+nav{
+display: flex;
+justify-content: space-between;
+margin-bottom: 4rem;
+@media(max-width: 500px){
+.column;
+align-items: center;
+width: 100%;
+justify-content: center;
+}
+a{
+text-decoration: none;
+color: @coloring;
+margin: 0px 10px;
+@media(max-width: 500px){
+display: flex;
+justify-content: center;
+font-size: 2rem;
+margin: 10px 0;
+width: 100%;
+color:gold;
+border-bottom: 1px solid white;
+}
+}
+
+}
+
+button{
+cursor: pointer;
+padding: 10px;
+width: 200px;
+font-size: 15px;
+border-radius: 18px;
+border-color: turquoise;
+background-color: darkmagenta;
+margin: 20px 0px;
+color: @coloring;
+@media(max-width: 500px){
+.column;
+align-self: center;
+align-items: center;
+color:@more-color;
+background-color: white;
+border-color: yellow;
+margin-bottom: 30px;
+}
+}
+}
+
+h2{
+font-family: @tangerine;
+
+margin: 10px 0px;
+}
+p{
+font-size: 1.2rem;
+@media(max-width: 500px){
+text-align: center;
+font-size: 1rem;
+color:white;
+}
+}
+strong{
+font-size: 1.3rem;
+color: @coloring;
+@media(max-width: 500px){
+text-align: center;
+font-size: 2rem;
+}
+}
+table, th, td {
+color:@more-color;
+border: 1px solid black;
+border-collapse: collapse;
+padding: 5px 40px 5px 5px;
+text-align: left;
+}
+
+.info{
+display: flex;
+flex-wrap: wrap;
+@media(max-width: 500px){
+.column;
+font-size: 2rem;
+width:100%;
+}
+.cmo{
+.border();	
+width: 60%;
+margin-right: 15%;
+@media(max-width: 500px){
+border-top:2px solid black;
+text-align: center;
+font-size: 1rem;
+width:100%;
+margin:0;
+}
+}
+.skill{
+	@media(max-width: 500px){
+		text-align: center;
+		.column;
+		font-size: 2rem;
+		width:100%;
+		margin:40px 0;
+		border-top:2px solid black;
+		td, th{
+			text-align: center;
+			color:white;
+			}
+		}
+}
+.history{
+.border();
+margin: 50px 0;
+@media(max-width: 500px){
+border-top:2px solid black;
+margin:30px 0;
+text-align: center;
+font-size: 1rem;
+width:100%;
+td, th{
+color:white;
+}
+}
+}
+
+}
+
+.contact{
+.icons{
+.border();
+display: flex;
+justify-content: space-evenly;
+margin-bottom: 20px;
+@media(max-width: 500px){
+	border-top:2px solid black;
+	margin:30px 0;
+}		
+a{
+text-decoration: none;
+color: @coloring;
+@media(max-width: 500px){
+	color: gold
+}
+}
+} 
+p{
+color:@more-color;
+display: flex;
+justify-content: center;
+padding: 5px;
+background: lavenderblush;
+@media(max-width: 500px){
+	background: paleturquoise;
+	color: blueviolet;
+}
+}
+} 
